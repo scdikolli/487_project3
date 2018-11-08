@@ -108,37 +108,32 @@ $(document).ready(function() {
           });//close DataTable
 
 //graph3
-          var url = 'js/gun-approval.json';
-          var gunApproval = [];
-            $.ajax({
-              type:'GET',
-              url:url,
-              data:gunApproval,
-              async:true,
-              dataType:'json',
-              success:function(gunApproval){
-                console.log(gunApproval);
+        var url2 = 'js/gun-approval.json';
+        var gunApproval = [];
+          $.ajax({
+            type:'GET',
+            url:url2,
+            data:gunApproval,
+            async:true,
+            dataType:'json',
+            success:function(gunApproval){
+              console.log(gunApproval);
 
-                var chart = new Taucharts.Chart({
-                    guide: {
-                      x: {label:'Age'},  // custom label for X axis
-                      y: {label:'Approval Percentage'},    // custom label for Y axis
-                      padding: {b:40,l:40,t:10,r:10}  // chart paddings
-                    },
-                    data: gunApproval,
-                    type: 'bar',
-                    x: 'Approval Gun Violence',
-                    y: 'All',
-                    plugins:[
-                       Taucharts.api.plugins.get('tooltip')({
-                         fields: ['Approval Gun Violence', '18-24']
-                       }),
-                       Taucharts.api.plugins.get('legend')()
-                    ]
-                });
-          chart.renderTo('#bar');
+              var chart = new Taucharts.Chart({
+                  data: gunApproval,
+                  type: 'bar',
+                  x: 'Approval Gun Violence',
+                  y: 'Percentage',
+                  plugins:[
+                     Taucharts.api.plugins.get('tooltip')({
+                       fields: ['Approval Gun Violence', '18-24']
+                     }),
+                     Taucharts.api.plugins.get('legend')()
+                  ]
+              });
+              chart.renderTo('#bar');
 
-                  }//close success
-                });//close AJAX
+              }//close success
+            });//close AJAX
 
       }); //close ready function

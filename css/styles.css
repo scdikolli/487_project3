@@ -3,7 +3,7 @@
   .site{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px 250px;
+    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px;
     grid-template-areas: 'hd hd hd hd hd hd'
     '. tl tl tl . .'
     '. by by by . .'
@@ -35,6 +35,14 @@
   p{
     font-family: 'Georgia', serif;
     font-size: 14px;
+  }
+
+  h5{
+    color: #fff;
+  }
+
+  h4{
+    color: #fff;
   }
 
   /* Header */
@@ -130,7 +138,7 @@
 
   .site{
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px 250px;
+    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px;
     grid-template-areas:
     'hd'
     'tl'
