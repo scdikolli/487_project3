@@ -1,0 +1,149 @@
+@supports (grid-area:auto) {
+
+  .site{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px 250px;
+    grid-template-areas: 'hd hd hd hd hd hd'
+    '. tl tl tl . .'
+    '. by by by . .'
+    '. in in in lat .'
+    '. g1 g1 g1 lat .'
+    '. g2 g2 g2 lat .'
+    '. g3 g3 g3 . .'
+    'ft ft ft ft ft ft';
+  }
+
+  /* Global Styles */
+  .flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  h1, a {
+    font-family: 'Cloister Black', serif;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  h2{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+  }
+
+  p{
+    font-family: 'Georgia', serif;
+    font-size: 14px;
+  }
+
+  /* Header */
+  .header{
+    grid-area: hd;
+    border-style: solid;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-left: 5%;
+    color: #fff;
+    background-color: #000;
+  }
+
+  .left-header{
+    flex-basis: 15%;
+  }
+
+  #logo{
+    flex-basis: 50%;
+  }
+
+  #log-in{
+    flex-basis: 20%;
+  }
+  /* Title */
+  .title{
+    grid-area: tl;
+    border-style: solid;
+  }
+  /* By-Line */
+  .by-line{
+    grid-area: by;
+    border-style: solid;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 10px;
+  }
+
+  .by-line h3{
+    padding: 10px;
+  }
+
+  .by-line h4{
+    padding: 5px;
+    color: gray;
+  }
+
+  /* Intro */
+  .intro{
+    grid-area: in;
+    border-style: solid;
+  }
+
+  /* Latest LA Now */
+  .latest-la-now{
+    grid-area: lat;
+    border-style: solid;
+  }
+
+  /* Graph1 */
+  .graph1{
+    grid-area: g1;
+    border-style: solid;
+  }
+  /* Graph2 */
+  .graph2{
+    grid-area: g2;
+    border-style: solid;
+  }
+  /* Graph3 */
+  .graph3{
+    grid-area: g3;
+    border-style: solid;
+  }
+
+  #bar{
+    width: 500px;
+    height: 500px;
+  }
+  /* Footer */
+  .footer{
+    grid-area: ft;
+    border-style: solid;
+    background-color: #000;
+  }
+
+  .footer p{
+    color: #fff;
+  }
+
+}
+
+@media screen and (max-width:768px){
+
+  .site{
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px 250px;
+    grid-template-areas:
+    'hd'
+    'tl'
+    'by'
+    'lat'
+    'in'
+    'g1'
+    'g2'
+    'g3'
+    'ft';
+  }
+
+
+
+
+}
