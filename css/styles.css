@@ -3,14 +3,14 @@
   .site{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 100px 100px 75px 200px 500px 500px 500px;
+    grid-template-rows: 100px 100px 75px 200px 500px 500px 600px;
     grid-template-areas: 'hd hd hd hd hd hd'
-    '. tl tl tl . .'
-    '. by by by . .'
-    '. in in in lat .'
-    '. g1 g1 g1 lat .'
-    '. g2 g2 g2 lat .'
-    '. g3 g3 g3 . .'
+    '. tl tl tl tl .'
+    '. by by by by .'
+    '. in in in in .'
+    '. g1 g1 g1 g1 .'
+    '. g2 g2 g2 g2 .'
+    '. g3 g3 g3 g3 .'
     'ft ft ft ft ft ft';
   }
 
@@ -21,15 +21,9 @@
     flex-wrap: wrap;
   }
 
-  h1, a {
-    font-family: 'Cloister Black', serif;
-    text-decoration: none;
-    color: #fff;
-  }
-
   h2{
     font-family: 'Cormorant Garamond', serif;
-    font-size: 36px;
+    font-size: 32px;
   }
 
   p{
@@ -37,12 +31,10 @@
     font-size: 14px;
   }
 
-  h5{
+  h6{
     color: #fff;
-  }
-
-  h4{
-    color: #fff;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 12px;
   }
 
   /* Header */
@@ -54,6 +46,12 @@
     padding-left: 5%;
     color: #fff;
     background-color: #000;
+  }
+
+  .header h1, a {
+    font-family: 'Cloister Black', serif;
+    text-decoration: none;
+    color: #fff;
   }
 
   .left-header{
@@ -96,10 +94,10 @@
   }
 
   /* Latest LA Now */
-  .latest-la-now{
+  /* .latest-la-now{
     grid-area: lat;
     border-style: solid;
-  }
+  } */
 
   /* Graph1 */
   .graph1{
@@ -126,11 +124,41 @@
     grid-area: ft;
     border-style: solid;
     background-color: #000;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
-  .footer p{
+  .footer h5{
     color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
   }
+
+  .footer h1{
+    color: #fff;
+    font-family: 'Cloister Black', serif;
+    font-size: 60px;
+  }
+
+  #ft-logo{
+    flex-basis: 10%;
+  }
+
+  #ft-info{
+    flex-basis: 30%;
+  }
+
+  #ft-links-left{
+    flex-basis: 10%;
+  }
+
+  #ft-links-right{
+    flex-basis: 10%;
+  }
+
 
 }
 
