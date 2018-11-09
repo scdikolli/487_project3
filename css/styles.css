@@ -3,7 +3,7 @@
   .site{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 100% 100% 75% 200% 500% 500% 600%;
+    grid-template-rows: 100px 150px 120px 250px 600px 670px 800px 300px;
     grid-template-areas: 'hd hd hd hd hd hd'
     '. tl tl tl tl .'
     '. by by by by .'
@@ -11,6 +11,7 @@
     '. g1 g1 g1 g1 .'
     '. g2 g2 g2 g2 .'
     '. g3 g3 g3 g3 .'
+    '. abt abt abt abt .'
     'ft ft ft ft ft ft';
   }
 
@@ -28,7 +29,7 @@
 
   p{
     font-family: 'Georgia', serif;
-    font-size: 14px;
+    font-size: 17px;
   }
 
   h6{
@@ -40,12 +41,11 @@
   /* Header */
   .header{
     grid-area: hd;
-    border-style: solid;
     flex-direction: row;
     flex-wrap: nowrap;
     padding-left: 5%;
     color: #fff;
-    background-color: #000;
+    background-color: #333333;
   }
 
   .header h1, a {
@@ -65,32 +65,58 @@
   #log-in{
     flex-basis: 20%;
   }
+
+  .header img{
+    height: 15%;
+    padding-right: 10px;
+  }
+
   /* Title */
   .title{
     grid-area: tl;
-    border-style: solid;
   }
+
   /* By-Line */
   .by-line{
     grid-area: by;
-    border-style: solid;
     font-family: 'Open Sans Bold', sans-serif;
     font-size: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
   }
 
   .by-line h3{
-    padding: 10px;
+    padding-right: 10px;
   }
 
   .by-line h4{
-    padding: 5px;
+    padding-right: 10px;
     color: gray;
+  }
+
+  .by-line img{
+    height: 5%;
+    width: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #byline-left{
+    flex-basis: 80%;
+    display: flex;
+  }
+
+  #byline-right{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
   }
 
   /* Intro */
   .intro{
     grid-area: in;
-    border-style: solid;
   }
 
   /* Latest LA Now */
@@ -102,7 +128,6 @@
   /* Graph1 */
   .graph1{
     grid-area: g1;
-    border-style: solid;
   }
 
   .graph1 h4, h5{
@@ -122,7 +147,6 @@
   /* Graph2 */
   .graph2{
     grid-area: g2;
-    border-style: solid;
   }
 
   .graph2 h4, h5{
@@ -145,7 +169,6 @@
   /* Graph3 */
   .graph3{
     grid-area: g3;
-    border-style: solid;
   }
 
   .graph3 h4, h5{
@@ -163,14 +186,51 @@
   }
 
   #bar{
-    width: 500px;
-    height: 500px;
+    width: 400px;
+    height: 400px;
   }
+
+  /* About Author */
+  .about-author{
+    grid-area: abt;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+  }
+
+  #author-icon{
+    width: 15%;
+    height: 30%;
+  }
+  .about-author img{
+    width: 5%;
+    height: 10%;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 15px;
+  }
+
+  .about-author p{
+    font-family: 'Cormorant Garamond SemiBold', serif;
+    font-size: 16px;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+  }
+
+  #about-contact{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid gray;
+  }
+
+  .about-author h4{
+    font-family: 'Open Sans Regular', sans-serif;
+    font-size: 16px;
+  }
+
   /* Footer */
   .footer{
     grid-area: ft;
-    border-style: solid;
-    background-color: #000;
+    background-color: #333333;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -188,6 +248,7 @@
     color: #fff;
     font-family: 'Cloister Black', serif;
     font-size: 60px;
+    text-align: center;
   }
 
   #ft-logo{
