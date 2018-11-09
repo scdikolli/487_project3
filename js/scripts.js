@@ -10,9 +10,12 @@ $(document).ready(function() {
                 type: 'column'
             },
             title: {
-                text: 'At which educational level are school shootings happening?'
+                text: ''
             },
             xAxis: {
+              title: {
+                  text: 'Location'
+              },
                 categories: ['Middle', 'High School', 'College']
                 //  categories:['Category']
             },

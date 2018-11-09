@@ -3,7 +3,7 @@
   .site{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
-    grid-template-rows: 100px 100px 75px 200px 500px 500px 600px;
+    grid-template-rows: 100% 100% 75% 200% 500% 500% 600%;
     grid-template-areas: 'hd hd hd hd hd hd'
     '. tl tl tl tl .'
     '. by by by by .'
@@ -104,15 +104,62 @@
     grid-area: g1;
     border-style: solid;
   }
+
+  .graph1 h4, h5{
+    flex-basis: 100%;
+    font-family: 'Open Sans Bold', sans-serif;
+  }
+
+  .graph1 h4{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .graph1 h5{
+    font-size: 12px;
+  }
+
   /* Graph2 */
   .graph2{
     grid-area: g2;
     border-style: solid;
   }
+
+  .graph2 h4, h5{
+    flex-basis: 100%;
+    font-family: 'Open Sans Bold', sans-serif;
+  }
+
+  .graph2 h4{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .graph2 h5{
+    font-size: 12px;
+  }
+
+  #container{
+    text-align: center;
+  }
   /* Graph3 */
   .graph3{
     grid-area: g3;
     border-style: solid;
+  }
+
+  .graph3 h4, h5{
+    flex-basis: 100%;
+    font-family: 'Open Sans Bold', sans-serif;
+  }
+
+  .graph3 h4{
+    font-size: 17px;
+    text-align: center;
+  }
+
+  .graph3 h5{
+    font-size: 12px;
   }
 
   #bar{
